@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
 import { KernelComponent } from './kernel/kernel.component';
 import { ChainComponent } from './chain/chain.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ChainComponent } from './chain/chain.component';
     ProductComponent,
     KernelComponent,
     ChainComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule
