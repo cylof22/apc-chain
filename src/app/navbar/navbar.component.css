@@ -5,10 +5,10 @@
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.navbar-nav > li > a, .navbar-brand {
-    padding-top:6px !important; 
-    padding-bottom:6px !important;
-    height: 20px;
+.navbar > a, .navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 40px;
 }
 
 .navbar-fixed-top {
