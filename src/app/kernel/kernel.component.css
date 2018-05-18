@@ -11,11 +11,13 @@
   margin-left: auto;
 }
 
-.marketing .col-md-3 {
+.marketing .col-md-3-5 {
+  width: 19.2%;
   margin-bottom: 1.5rem;
   text-align: center;
   float: none;
 }
+
 
 .kernel-descrip {
   text-align: left
