@@ -1,3 +1,13 @@
+
+.home-background {
+    background: transparent url("../assets/home.jpg") no-repeat center center fixed;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100vh;
+}
+
 .home-page {
     margin: 0 auto;
     padding-top: 60px;
