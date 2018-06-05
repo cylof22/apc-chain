@@ -5,10 +5,11 @@
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.navbar > a, .navbar-brand {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    height: 40px;
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:6px !important; 
+    padding-bottom:6px !important;
+    height: 20px;
 }
 
 .navbar-fixed-top {
@@ -18,4 +19,48 @@
 .navbar{
     min-height:20px;
     width: 100%; 
+}
+
+.header-group {
+    position: relative;
+
+    height: 30px;
+    margin: 0;
+
+    background-color: black;
+    opacity: 0.5;
+}
+
+.header-group .logo {
+    position: absolute;
+    left: 8px;
+    margin-right: 0;
+    margin-top: 6px;
+    background-color: transparent;
+    height: 20px;
+}
+
+.header-group .company {
+    position: absolute;
+
+    left: 25px;
+    margin-top: 5px;
+    font-size: 15px;
+    outline: none;
+
+    color: white;
+    background-color: transparent;
+
+}
+
+.header-group .link-group {
+    position: absolute;
+    right: 10px;
+
+    margin-top: 2px;
+}
+
+.header-group .link-group .link {
+    color: white;
+    font-size: 15px;
 }

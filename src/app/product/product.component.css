@@ -1,3 +1,19 @@
+.product {
+    background-color: rgb(24, 39, 56);
+    opacity: 0.8;
+
+    padding-top: 60px;
+    padding-bottom: 5px;
+
+    color: white;
+}
+
 .product-info {
-    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.product-info p{
+    margin-right: 10px;
+    float: left;
 }

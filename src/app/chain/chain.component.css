@@ -1,3 +1,13 @@
+.chain {
+    background-color: rgb(12, 4, 54);
+    opacity: 0.8;
+
+    margin: 0;
+    padding: 1px;
+
+    color: white;
+}
+
 .chain-page {
     padding-top: 60px;
 }
