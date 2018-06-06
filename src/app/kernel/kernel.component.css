@@ -37,7 +37,7 @@
 
 @media (min-width: 992px) { 
   .col-md-3-5 {
-    width: 19.2%;
+    width: 18.8%;
   }
 }
 
@@ -52,32 +52,64 @@
 }
 
 .adv-desp {
-  margin: 10px;
+  margin: 0px;
 }
 
 .adv-1 {
-  background-color: rgb(95, 112, 145);
-  margin: 5px;
+  background-color: rgb(93, 114, 155);
+  margin-left: 0;
+  margin-right: 15px;
+
+  border-radius: 4px;
+
 }
 
 .adv-2 {
-  background-color: rgb(52, 51, 114);
-  margin: 5px;
+  background-color: rgb(75, 104, 161);
+  margin-left: 0;
+  margin-right:15px;
+
+  border-radius: 4px;
+
 }
 
 .adv-3 {
-  background-color: rgb(99, 129, 75);
-  margin:5px;
+  background-color: rgb(63, 100, 173);
+  margin-left: 0;
+  margin-right: 15px;
+
+  border-radius: 4px;
 }
 
 .adv-4 {
-  background-color: rgb(151, 73, 89);
-  margin: 5px;
+  background-color: rgb(33, 77, 165);
+  margin-left: 0;
+  margin-right: 15px;
+
+  border-radius: 4px;
+
 }
 
 .adv-5 {
-  background-color: rgb(134, 123, 68);
-  margin: 5px;
+  background-color: rgb(9, 61, 165);
+  margin-left: 0;
+  margin-right: 15px;
+
+  border-radius: 4px;
+
+  opacity: 0.8;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 12px;
 }
 
 
