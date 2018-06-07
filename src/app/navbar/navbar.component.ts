@@ -14,5 +14,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     let chElem = document.getElementById(this.langId);
     chElem.classList.add('active');
+
+    let enElem = document.getElementById('en');
+    enElem.style.color = 'cornflowerblue';
   }
 }
