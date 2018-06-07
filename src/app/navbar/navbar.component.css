@@ -54,16 +54,31 @@
     height: 30px;
     margin: 0;
 
-    background-color: black;
     opacity: 0.5;
+
+    background-color: black;
 }
 
-.header-group .link-group .link {
+.header-group .link-group .ch {
     position: absolute;
 
-    right: 10px;
-    margin-top: 3px;
+    left: 10px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.header-group .link-group .en {
+    position: absolute;
+
+    left: 50px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.header-group .link-group .active {
+    margin-top: 4px;
+    font-size: 15px;
 
     color: white;
-    font-size: 15px;
+    font-weight: bold;
 }
