@@ -14,7 +14,7 @@
                         id="address" type="text"
                         class="form-control" 
                         placeholder="钱包地址" 
-                        (keyup)="onInput()" required>
+                        (keyup)="onInput()">
             </div>
 
             <div class="item-group">
@@ -39,7 +39,7 @@
                 <!-- <label class="name">姓名</label> -->
                 <input formControlName="name" 
                         id="name" type="text"
-                        class="form-control left" 
+                        class="form-control" 
                         placeholder="你的姓名"
                         (keyup)="onInput()">
             </div>
@@ -47,7 +47,7 @@
             <div class="item-group">
                 <!-- <label>联系电话</label> -->
                 <input formControlName="phone" 
-                        id="phone" type="text"
+                        id="phone" type="number"
                         class="form-control" 
                         placeholder="联系电话"
                         (keyup)="onInput()">
@@ -62,11 +62,13 @@
                         (keyup)="onInput()">
             </div>
 
-            <button type="submit" class="submit-btn">提交</button>
-
             <div class="fail-container" *ngIf="errorValue != ''">
                 <p class="fail"> {{errorValue}} </p>
             </div>
+            <div class="empty-fail" *ngIf="errorValue == ''">
+            </div>
+
+            <button id="submit" type="submit" class="submit-btn">提交</button>
         </div>
     </div>  
 </form>

@@ -32,19 +32,33 @@ export class CHAirdropComponent implements OnInit {
   }
 
   submit() {
-    //this.errorValue = this.formModel.value.mail;
-    //alert(JSON.stringify(this.formModel.value));
+    if (this.formModel.value.address == '') {
+        this.errorValue = '请输入钱包地址';
+        return;
+    }
 
-    if (this.formModel.value.mail != '') {
+    if (this.formModel.value.telegramid == '' && this.formModel.value.wechatid == '') {
+        this.errorValue = '电报和微信必须输入一个';
+        return;
+    }
+
+    if (this.formModel.value.mail != null && this.formModel.value.mail != '') {
         let regEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
         if (!regEmail.test(this.formModel.value.mail)) {
-            this.errorValue = 'Email invalid';
+            this.errorValue = '无效的邮箱地址';
             return;
         }
     }
 
     this.httpService.register(JSON.stringify(this.formModel.value)).subscribe(
         output => {
+            if (output != null) {
+                this.errorValue = output;
+            }
+
+            if (this.errorValue == '') {
+                this.formModel.reset();
+            }
         }
     );
   }

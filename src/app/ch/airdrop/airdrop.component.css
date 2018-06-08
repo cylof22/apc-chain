@@ -37,15 +37,11 @@
     height: 30px;
 }
 
-.left {
-    float: left;
-}
-
-.submit-btn {
+.airdrop .input-group .submit-btn {
     width: 100%;
     height:30px;
 
-    margin-top: 20px;
+    margin-top: 3px;
 
     border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
@@ -56,19 +52,37 @@
     outline: none;
 
     background-color: cornflowerblue;
+
+    /* text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627; */
 }
 
-.fail-container {
-    position: relative;
+/* .submit-btn:hover {
+    background-color:#5cbf2a;
+} */
 
-    top: -55px;
+.airdrop .input-group .submit-btn:active {
+    position:relative;
+    top:1px;
+}
+
+.airdrop .input-group .fail-container {
+    margin-top: -8px;
+}
+
+.airdrop .input-group .fail-container .fail {
+    height: 25px;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
 
     text-align: center;
-
     background-color: red;
 }
 
-.fail-container .fail {
-    margin: 0;
-    padding: 0;
+.airdrop .input-group .empty-fail {
+    margin-top: -8px;
+    width: 100%;
+    height: 25px;
 }
