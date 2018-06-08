@@ -45,9 +45,6 @@ export class CHAirdropComponent implements OnInit {
 
     this.httpService.register(JSON.stringify(this.formModel.value)).subscribe(
         output => {
-            if (output.hasOwnProperty('error')) {
-                this.errorValue = output['error'];
-            }
         }
     );
   }
