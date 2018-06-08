@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NavbarComponent } from './navbar/navbar.component';
+import { HTTPService } from './service/http.service'
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +16,7 @@ import { CHProductComponent } from './ch/product/product.component';
 import { CHKernelComponent } from './ch/kernel/kernel.component';
 import { CHChainComponent } from './ch/chain/chain.component';
 import { CHContactComponent } from './ch/contact/contact.component';
+import { CHAirdropComponent } from './ch/airdrop/airdrop.component'
 
 import { ENMainComponent } from './en/main/main.component';
 import { ENFooterComponent } from './en/footer/footer.component';
@@ -34,6 +38,7 @@ import { ENContactComponent } from './en/contact/contact.component';
     CHKernelComponent,
     CHChainComponent,
     CHContactComponent,
+    CHAirdropComponent,
     ENMainComponent,
     ENFooterComponent,
     ENHomeComponent,
@@ -44,14 +49,20 @@ import { ENContactComponent } from './en/contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: CHMainComponent},
     ]),
     RouterModule.forChild([
       {path: 'en', component: ENMainComponent},
+      {path: 'ch/airdrop', component: CHAirdropComponent},
   ])
   ],
-  providers: [],
+  providers: [
+    HTTPService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
