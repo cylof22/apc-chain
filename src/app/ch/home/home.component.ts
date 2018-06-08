@@ -24,7 +24,7 @@ export class CHHomeComponent implements OnInit {
     }
 
     if (isMobile) {
-      this.imageSrc = 'assets/home.jpg';
+      this.imageSrc = 'assets/background-mobile.jpg';
     } else {
       this.imageSrc = 'assets/background-comp.jpeg';
     }

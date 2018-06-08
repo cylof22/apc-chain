@@ -4,15 +4,31 @@
     margin: 0;
     padding-top: 5px;
     padding-bottom: 20px;
-    padding-left: 15px;
 
     color: white;
 }
 
-.item-group {
-    margin-top: 10px;
+.footer .info-group {
+    padding-left: 15px;
 }
 
-.contact-item {
+.footer .info-group .item-group {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 0;
+}
+
+.footer .info-group .item-group .contact-item {
+    padding: 0;
+    margin-left: 0;
     margin-right: 60px;
+}
+
+.footer  .company {
+    padding: 0;
+}
+
+.footer .company .value {
+    padding: 0;
+    margin: 0;
 }

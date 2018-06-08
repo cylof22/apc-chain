@@ -10,50 +10,40 @@
     color: white;
 }
 
-.product .product-info {
-    height: 30px;
-    padding: 0;
-    margin-bottom: 0px;
-}
-
 .font-1 {
-  font-size: 12px;
+    font-size: 12px;
 }
 
-.product .product-info p{
-    margin-right: 10px;
-    margin-top: 0;
-    margin-bottom: 10;
-
-    padding: 0;
+.product .general-info {
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .product .video-group {
     padding: 0;
-    margin-top: 20px;
-    margin-left: 0;
+    margin-top: 15px;
 
-    text-align: center;
+    margin-right: 0;
 }
 
 .product .video-group .video {
-    width: 350px;
+    width: 100%;
     height: auto;
 
     padding: 0;
     margin: 0;
 }
 
-.product .video-group .video .source {
+.product .general-info .homepage {
+    height: 30px;
     padding: 0;
-    margin: 0;
-
+    margin-bottom: 0px;
 }
 
-.left {
-    float: left;
-}
+.product .general-info .homepage p{
+    margin-right: 10px;
+    margin-top: 0;
 
-.right {
-    float: right;
+    padding: 0;
 }
