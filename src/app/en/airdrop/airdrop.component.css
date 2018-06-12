@@ -1,0 +1,100 @@
+.airdrop {
+    background-color: rgb(109, 109, 238);
+
+    margin: 0;
+    padding: 15px;
+}
+
+.airdrop .general-info {
+    padding-top: 60px;
+
+    text-align: center;
+}
+
+.airdrop .input-group {
+    width: 330px;
+    margin: auto;
+}
+
+.airdrop .input-group .item-group {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.airdrop .input-group .item-group label{
+    float: left;
+
+    margin-right: 2px;
+    margin-top: 2px;
+}
+
+.airdrop .input-group .item-group .name {
+    margin-left: 31px;
+
+    outline: none;
+}
+
+.airdrop .input-group .item-group input{
+    width: 325px;
+    height: 30px;
+}
+
+.airdrop .input-group .item-group select{
+    width: 325px;
+    height: 30px;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 8px;
+}
+
+.airdrop .input-group .submit-btn {
+    width: 100%;
+    height:30px;
+
+    margin-top: 3px;
+
+    border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    border: none;
+    outline: none;
+
+    background-color: cornflowerblue;
+
+    /* text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627; */
+}
+
+/* .submit-btn:hover {
+    background-color:#5cbf2a;
+} */
+
+.airdrop .input-group .submit-btn:active {
+    position:relative;
+    top:1px;
+}
+
+.airdrop .input-group .fail-container {
+    margin-top: -8px;
+}
+
+.airdrop .input-group .fail-container .fail {
+    height: 25px;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    background-color: red;
+}
+
+.airdrop .input-group .empty-fail {
+    margin-top: -8px;
+    width: 100%;
+    height: 25px;
+}
