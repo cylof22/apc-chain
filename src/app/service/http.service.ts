@@ -11,4 +11,9 @@ export class HTTPService {
         let body = postedData;
         return this.http.post<string>("/token", body);
     }
+
+    upload(postedData : any) : Observable<string> {
+        let body = postedData;
+        return this.http.post<string>("/picture", body);
+    }
 }

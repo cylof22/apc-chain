@@ -17,6 +17,7 @@ import { CHKernelComponent } from './ch/kernel/kernel.component';
 import { CHChainComponent } from './ch/chain/chain.component';
 import { CHContactComponent } from './ch/contact/contact.component';
 import { CHAirdropComponent } from './ch/airdrop/airdrop.component'
+import { CHUploadComponent } from './ch/upload/upload.component'
 
 import { ENMainComponent } from './en/main/main.component';
 import { ENFooterComponent } from './en/footer/footer.component';
@@ -39,6 +40,7 @@ import { ENContactComponent } from './en/contact/contact.component';
     CHChainComponent,
     CHContactComponent,
     CHAirdropComponent,
+    CHUploadComponent,
     ENMainComponent,
     ENFooterComponent,
     ENHomeComponent,
