@@ -26,6 +26,8 @@ import { ENProductComponent } from './en/product/product.component';
 import { ENKernelComponent } from './en/kernel/kernel.component';
 import { ENChainComponent } from './en/chain/chain.component';
 import { ENContactComponent } from './en/contact/contact.component';
+import { ENAirdropComponent } from './en/airdrop/airdrop.component';
+import { ENUploadComponent } from './en/upload/upload.component';
 
 
 @NgModule({
@@ -48,6 +50,8 @@ import { ENContactComponent } from './en/contact/contact.component';
     ENKernelComponent,
     ENChainComponent,
     ENContactComponent,
+    ENAirdropComponent,
+    ENUploadComponent,
   ],
   imports: [
     BrowserModule,

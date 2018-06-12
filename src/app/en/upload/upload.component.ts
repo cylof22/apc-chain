@@ -8,7 +8,7 @@ import { HTTPService } from './../../service/http.service'
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css']
 })
-export class CHUploadComponent implements OnInit {
+export class ENUploadComponent implements OnInit {
     formModel: FormGroup;
     errorValue: string = '';
     showReselectCtrl: boolean = false;
