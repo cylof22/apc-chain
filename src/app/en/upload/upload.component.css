@@ -1,0 +1,122 @@
+.upload {
+    background-color: rgb(248, 250, 252);
+
+    margin: 0;
+    padding: 15px;
+}
+
+.upload .general-info {
+    padding-top: 60px;
+
+    text-align: center;
+}
+
+.upload .input-group {
+    width: 330px;
+    margin: auto;
+}
+
+.upload .input-group .item-group {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.upload .input-group .item-group input{
+    width: 325px;
+    height: 30px;
+}
+
+.upload .input-group .submit-btn {
+    width: 100%;
+    height:30px;
+
+    margin-top: 3px;
+
+    border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    border: none;
+    outline: none;
+
+    background-color: cornflowerblue;
+
+    /* text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627; */
+}
+
+.upload .input-group .submit-btn:active {
+    position:relative;
+    top:1px;
+}
+
+.upload .input-group .fail-container {
+    margin-top: -8px;
+}
+
+.upload .input-group .fail-container .fail {
+    height: 25px;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    background-color: red;
+}
+
+.upload .input-group .empty-fail {
+    margin-top: -8px;
+    width: 100%;
+    height: 25px;
+}
+
+.upload .input-group .image-container {
+    width: 100%;
+    margin-bottom: 0px;
+
+    text-align: center;
+}
+
+.upload .input-group .image-container .selectBtn{
+    margin-bottom: 0px;
+    
+    width: 50px;
+    height: 50px;
+
+    line-height: 5px;
+    color: white;
+    font-size: 60px;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+
+    border-radius: 25px;
+}
+
+.image-container .reselect-container {
+    position: relative;
+    top: 40%;
+}
+
+.image-container .reselect-container .reselect-Btn {
+    position: absolute;
+    left: 43%;
+
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+
+    margin-top: -30px;
+
+    border-radius: 20px;
+}
+
+.image-container .image {
+    width: 95%;
+    height: auto;
+}
