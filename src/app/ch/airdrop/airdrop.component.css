@@ -37,6 +37,16 @@
     height: 30px;
 }
 
+.airdrop .input-group .item-group select{
+    width: 325px;
+    height: 30px;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 8px;
+}
+
 .airdrop .input-group .submit-btn {
     width: 100%;
     height:30px;

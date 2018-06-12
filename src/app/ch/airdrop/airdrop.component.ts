@@ -20,7 +20,8 @@ export class CHAirdropComponent implements OnInit {
         'mail': '',
         'address': '',
         'telegramid': '',
-        'wechatid': ''
+        'wechatid': '',
+        'profession': '',
         })
     }
 
@@ -57,9 +58,17 @@ export class CHAirdropComponent implements OnInit {
             }
 
             if (this.errorValue == '') {
-                this.formModel.reset();
+                this.formModel.reset({
+                    'name': '',
+                    'phone': '',
+                    'mail': '',
+                    'address': '',
+                    'telegramid': '',
+                    'wechatid': '',
+                    'profession': '',
+                    });
             }
         }
-    );
+    )
   }
 }

@@ -3,8 +3,8 @@
       <div class="airdrop">
         <div class="general-info">
             <h4>空投</h4>
-            <p>请填写尽量多的信息以尽可能多的获取你想要的。如何你有任何意见或者疑虑，请将其发布到我们的
-                <a href="">电报组</a>
+            <p>本轮空投会给每位2000EF。请确保您有合法的数字钱包。</p>
+            <p>请填写尽量多的信息以尽可能多的获取你想要的。如何你有任何意见或者疑虑，请将其发布到我们的<a href="">电报组</a>或者联系微信号12345.
             </p>
         </div>
         <div class="row input-group">
@@ -60,6 +60,16 @@
                         class="form-control" 
                         placeholder="邮箱地址"
                         (keyup)="onInput()">
+            </div>
+        
+            <div class="item-group">
+                <select formControlName="profession"
+                        id="profession"
+                        class="form-control">
+                    <option value="">职业</option>
+                    <option>画家</option>
+                    <option>摄影师</option>
+                </select>
             </div>
 
             <div class="fail-container" *ngIf="errorValue != ''">
