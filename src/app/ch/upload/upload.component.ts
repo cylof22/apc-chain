@@ -11,6 +11,7 @@ import { HTTPService } from './../../service/http.service'
 export class CHUploadComponent implements OnInit {
     formModel: FormGroup;
     errorValue: string = '';
+    successValue: string = '';
     showReselectCtrl: boolean = false;
 
     constructor(private httpService: HTTPService) { 
@@ -49,6 +50,7 @@ export class CHUploadComponent implements OnInit {
                 }
 
                 if (this.errorValue == '') {
+                    this.successValue = '上传成功';
                     this.formModel.reset({
                         'address': '',
                         'wechatid': '',

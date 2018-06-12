@@ -2,6 +2,7 @@
       <div class="upload">
         <div class="general-info">
             <h4>上传图片</h4>
+            <p>最多上传5张照片。如有任何问题请联系微信号sky487746.
         </div>
         <div class="row input-group">
             <div id="fileSelGroup">
@@ -51,7 +52,10 @@
             <div class="fail-container" *ngIf="errorValue != ''">
                 <p class="fail"> {{errorValue}} </p>
             </div>
-            <div class="empty-fail" *ngIf="errorValue == ''">
+            <div class="fail-container" *ngIf="successValue != ''">
+                <p class="success"> {{successValue}} </p>
+            </div>
+            <div class="empty-fail" *ngIf="errorValue == '' && successValue == ''">
             </div>
 
             <button id="submit" type="submit" class="submit-btn" (click)="submit()">提交</button>
