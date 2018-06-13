@@ -51,6 +51,7 @@ export class ENAirdropComponent implements OnInit {
         }
     }
 
+    this.formModel.value.phone = this.formModel.value.phone.toString();
     this.httpService.register(JSON.stringify(this.formModel.value)).subscribe(
         output => {
             if (output != null) {

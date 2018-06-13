@@ -29,7 +29,7 @@
 }
 
 .upload .input-group .submit-btn {
-    width: 100%;
+    width: 99%;
     height:30px;
 
     margin-top: 3px;
@@ -87,27 +87,25 @@
 
 .upload .input-group .image-container {
     width: 100%;
-    margin-bottom: 0px;
+    margin: 0;
+
+    padding: 0;
 
     text-align: center;
 }
 
 .upload .input-group .image-container .selectBtn{
-    margin-bottom: 0px;
-    
     width: 50px;
     height: 50px;
-
-    line-height: 5px;
-    color: white;
-    font-size: 58px;
-    background-color: cornflowerblue;
     border: none;
     outline: none;
 
-    padding-bottom: 15px;
-
     border-radius: 25px;
+    background-color: cornflowerblue;
+
+    background-image: url('/assets/select.png');
+    background-position: center center;
+    background-size: cover;
 }
 
 .image-container .reselect-container {
@@ -134,4 +132,7 @@
 .image-container .image {
     width: 95%;
     height: auto;
+
+    margin-left: 0;
+    margin-right: 5px;
 }

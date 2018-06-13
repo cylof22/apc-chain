@@ -31,4 +31,10 @@
 .footer .company .value {
     padding: 0;
     margin: 0;
+
+    font-size: 15px;
+}
+
+p {
+    font-size: 12px;
 }

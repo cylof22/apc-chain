@@ -1,8 +1,10 @@
 .upload {
-    background-color: rgb(248, 250, 252);
+    background-color: rgb(81, 118, 124);
 
     margin: 0;
     padding: 15px;
+
+    color: white;
 }
 
 .upload .general-info {
@@ -27,7 +29,7 @@
 }
 
 .upload .input-group .submit-btn {
-    width: 100%;
+    width: 99%;
     height:30px;
 
     margin-top: 3px;
@@ -66,6 +68,17 @@
     background-color: red;
 }
 
+.upload .input-group .fail-container .success {
+    height: 25px;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    background-color: green;
+}
+
 .upload .input-group .empty-fail {
     margin-top: -8px;
     width: 100%;
@@ -74,25 +87,25 @@
 
 .upload .input-group .image-container {
     width: 100%;
-    margin-bottom: 0px;
+    margin: 0;
+
+    padding: 0;
 
     text-align: center;
 }
 
 .upload .input-group .image-container .selectBtn{
-    margin-bottom: 0px;
-    
     width: 50px;
     height: 50px;
-
-    line-height: 5px;
-    color: white;
-    font-size: 60px;
-    background-color: cornflowerblue;
     border: none;
     outline: none;
 
     border-radius: 25px;
+    background-color: cornflowerblue;
+
+    background-image: url('/assets/select.png');
+    background-position: center center;
+    background-size: cover;
 }
 
 .image-container .reselect-container {
@@ -102,7 +115,7 @@
 
 .image-container .reselect-container .reselect-Btn {
     position: absolute;
-    left: 43%;
+    left: 35%;
 
     width: 100px;
     height: 30px;
@@ -119,4 +132,7 @@
 .image-container .image {
     width: 95%;
     height: auto;
+
+    margin-left: 0;
+    margin-right: 5px;
 }

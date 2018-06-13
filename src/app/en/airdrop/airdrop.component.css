@@ -1,5 +1,5 @@
 .airdrop {
-    background-color: rgb(109, 109, 238);
+    background-color: rgb(141, 157, 170);
 
     margin: 0;
     padding: 15px;
@@ -50,7 +50,7 @@
 }
 
 .airdrop .input-group .submit-btn {
-    width: 100%;
+    width: 99%;
     height:30px;
 
     margin-top: 3px;

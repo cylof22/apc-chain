@@ -28,14 +28,13 @@
                         (keyup)="onInput()">
             </div>
 
-            <div class="thumbnail image-container" 
+            <div class="image-container" 
                     (mouseenter)="showReselectBtn()"
                     (mouseleave)="removeReselectBtn()">
 
                 <!-- first selection -->
                 <input class="selectBtn" 
                         type="button" 
-                        value="+" 
                         (click)="selectFile()" 
                         *ngIf="imagePreview.src == ''">
                 
