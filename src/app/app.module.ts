@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { LocationStrategy, PathLocationStrategy } from "@angular/common";
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { HTTPService } from './service/http.service'
@@ -69,7 +69,7 @@ import { ENUploadComponent } from './en/upload/upload.component';
   ],
   providers: [
     HTTPService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
   ],
   bootstrap: [AppComponent]
 })
