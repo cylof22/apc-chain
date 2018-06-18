@@ -19,6 +19,8 @@ import { CHChainComponent } from './ch/chain/chain.component';
 import { CHContactComponent } from './ch/contact/contact.component';
 import { CHAirdropComponent } from './ch/airdrop/airdrop.component'
 import { CHUploadComponent } from './ch/upload/upload.component'
+import { CHConceptComponent } from './ch/concept/concept.component'
+import { CHPublicAirdropComponent } from './ch/public-airdrop/public-airdrop.component'
 
 import { ENMainComponent } from './en/main/main.component';
 import { ENFooterComponent } from './en/footer/footer.component';
@@ -44,6 +46,8 @@ import { ENUploadComponent } from './en/upload/upload.component';
     CHContactComponent,
     CHAirdropComponent,
     CHUploadComponent,
+    CHConceptComponent,
+    CHPublicAirdropComponent,
     ENMainComponent,
     ENFooterComponent,
     ENHomeComponent,
@@ -64,7 +68,7 @@ import { ENUploadComponent } from './en/upload/upload.component';
     ]),
     RouterModule.forChild([
       {path: 'en', component: ENMainComponent},
-      {path: 'ch/airdrop', component: CHAirdropComponent},
+      {path: 'ch/airdrop', component: CHPublicAirdropComponent},
   ])
   ],
   providers: [

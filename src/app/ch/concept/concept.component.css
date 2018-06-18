@@ -1,0 +1,8 @@
+.concept {
+    background-image: url("assets/concept.jpg");
+    background-position: center center;
+    background-size:cover;
+
+    padding: 0;
+    margin: 0;
+}

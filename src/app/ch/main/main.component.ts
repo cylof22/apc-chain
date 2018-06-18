@@ -9,5 +9,12 @@ export class CHMainComponent {
   constructor() { }
 
   ngOnInit() {
+    if (window.screen) {
+      let mainPage = document.getElementById('main');
+      mainPage.style.width = window.screen.width.toString() + 'px';
+    } else {
+      let mainPage = document.getElementById('main');
+      mainPage.style.width = '1280px';
+    }
   }
 }

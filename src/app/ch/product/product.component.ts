@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class CHProductComponent implements OnInit {
-
-  constructor() { }
+  playVideo: boolean;
+  constructor() { 
+    this.playVideo = false;
+  }
 
   ngOnInit() {
   }
 
+  play() {
+    this.playVideo = true;
+    let vedio = <HTMLVideoElement>document.getElementById('video');
+    if (vedio != null) {
+      vedio.play();
+    }
+  }
 }

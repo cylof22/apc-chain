@@ -1,49 +1,116 @@
 .product {
-    background-color: rgb(24, 39, 56);
-    opacity: 0.8;
+    padding: 0;
+    background-image: url("assets/product.jpg");
+    background-position: center center;
+    background-size:cover;
 
-    padding-top: 60px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    color: white;
+    height: 950px;
 }
 
-.font-1 {
+.product .image {
+    width: 39%;
+    height: auto;
+
+    margin-left: 0;
+    margin-top: -160px;
+}
+
+.detail {
     font-size: 12px;
 }
 
 .product .general-info {
+    width: 48%;
+    margin-left: 6%;
     margin-bottom: 0px;
-    margin-left: 0;
     margin-right: 0;
+    margin-top: -10px;
+
+    padding: 0;
+}
+
+.product .general-info .title {
+    width: 100%;
+    margin-left: 0;
+}
+
+.product .general-info .title .logoimage {
+    width: 20%;
+    height: auto;
+
+    border-radius: 8px;
+    margin-right: 3%;
+    margin-left: 0;
+}
+
+.product .general-info .title .info {
+    width: 72%;
+    margin-bottom: 0;
+
+    padding: 0;
+}
+
+.product .general-info .title .info .common {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.product .general-info .detail-info {
+    width: 95%;
+
+    margin-top: 30px;
 }
 
 .product .video-group {
-    padding: 0;
-    margin-top: 15px;
-
-    margin-right: 0;
-}
-
-.product .video-group .video {
-    width: 100%;
-    height: auto;
-
+    width: 44%;
     padding: 0;
     margin: 0;
 }
 
-.product .general-info .homepage {
+.product .video-group button {
+    width: 30px;
     height: 30px;
-    padding: 0;
-    margin-bottom: 0px;
+
+    margin-left: 50%;
+    margin-top: 42px;
+    margin-bottom: 0;
+
+    border-radius: 15px;
+
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    outline: none;
+
+    background-image: url("assets/bofang.png");
+    background-position: center center;
+    background-size:cover;
 }
 
-.product .general-info .homepage p{
-    margin-right: 10px;
-    margin-top: 0;
+.product .video-group button:hover {
+    border-color: cornflowerblue;
+}
 
+.product .video-group button:active {
+    position:relative;
+    top:1px;
+}
+
+.product .video-group .video {
+    width: 372px;
+    height: auto;
+
+    margin-top: -125px;
+    margin-left: 121px;
+
+    padding: 0;
+
+    border-radius: 10px;
+}
+
+.product .video-group .video source{
+
+    margin: -0px;
     padding: 0;
 }

@@ -11,6 +11,7 @@ import { HTTPService } from './../../service/http.service'
 export class CHAirdropComponent implements OnInit {
     formModel: FormGroup;
     errorValue: string = '';
+    showQRCode: boolean = false;
 
     constructor(private httpService: HTTPService) { 
         const fb = new FormBuilder();
@@ -71,5 +72,13 @@ export class CHAirdropComponent implements OnInit {
             }
         }
     )
+  }
+
+  showWechat() {
+      this.showQRCode = true;
+  }
+
+  hideWchat() {
+    this.showQRCode = false;
   }
 }
