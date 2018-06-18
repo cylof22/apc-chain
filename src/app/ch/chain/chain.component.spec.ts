@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChainComponent } from './chain.component';
+import { CHChainComponent } from './chain.component';
 
 describe('ChainComponent', () => {
-  let component: ChainComponent;
-  let fixture: ComponentFixture<ChainComponent>;
+  let component: CHChainComponent;
+  let fixture: ComponentFixture<CHChainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChainComponent ]
+      declarations: [ CHChainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChainComponent);
+    fixture = TestBed.createComponent(CHChainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
