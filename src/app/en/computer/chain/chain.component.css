@@ -1,0 +1,81 @@
+.chain {
+    margin: 0;
+    padding: 0;
+}
+
+.chain .info-container {
+    width: 72%;
+}
+
+.chain .info-container .titleImage {
+    width: 100%;
+    height: auto;
+
+    background-color: transparent;
+}
+
+.chain .info-container .introduction {
+    margin-top: 230px;
+    margin-left: 10%;
+}
+
+.chain .placeholderImage {
+    width: 28%;
+    margin-top: -145px;
+}
+
+.chain .placeholderImage img{
+    width: 100%;
+    height: auto;
+}
+
+.chain .info-container .footer-container {
+    height: auto;
+
+    margin-left: 8%;
+    padding: 0;
+}
+
+.chain .info-container .footer-container .download {
+    width: 180px;
+    height: 80px;
+    padding: 0;
+    margin-right: 30px;
+
+    background-image: url("assets/download.png");
+    background-position: center center;
+    background-size:cover;
+
+    float: left;
+}
+
+.chain .info-container .footer-container .download a{
+    position: relative;
+    top: 35px;
+    left: 40px;
+}
+
+.chain .info-container .footer-container .info-group {
+    padding-top: 40px;
+}
+
+.chain .info-container .footer-container .info-group p{
+    font-size: 12px;
+    float: left;
+}
+
+.chain .info-container .footer-container .info-group .fenge {
+    height: 12px;
+    width: 2px;
+    background: rgb(189, 186, 186);
+    overflow: hidden;
+
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    padding: 0;
+
+    float: left;
+}

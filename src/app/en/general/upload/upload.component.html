@@ -1,0 +1,63 @@
+<form [formGroup]="formModel">
+      <div class="upload">
+        <div class="general-info">
+            <h4>上传图片</h4>
+            <p>最多上传5张照片。如有任何问题请联系微信号sky487746.
+        </div>
+        <div class="row input-group">
+            <div id="fileSelGroup">
+                <input type="file" name="imagePath" id="imagePath" style="display: none;"
+                    (change)="showImage(input)" accept="image/png,image/jpg,image/jpeg" #input/>
+            </div>
+
+            <div class="item-group">
+                <!-- <label class="email-label">微信</label> -->
+                <input formControlName="wechatid" 
+                        id="wechatid" type="text"
+                        class="form-control" 
+                        placeholder="微信账号(必填)"
+                        (keyup)="onInput()">
+            </div>
+
+            <div class="item-group">
+                <!-- <label class="name-label">钱包地址</label> -->
+                <input formControlName="address" 
+                        id="address" type="text"
+                        class="form-control" 
+                        placeholder="钱包地址" 
+                        (keyup)="onInput()">
+            </div>
+
+            <div class="image-container" 
+                    (mouseenter)="showReselectBtn()"
+                    (mouseleave)="removeReselectBtn()">
+
+                <!-- first selection -->
+                <input class="selectBtn" 
+                        type="button" 
+                        (click)="selectFile()" 
+                        *ngIf="imagePreview.src == ''">
+                
+                <!-- select again -->
+                <div *ngIf="showReselectCtrl" class="reselect-container">
+                    <button class="reselect-Btn" (click)="selectFile()">Reselect
+                    </button>
+                </div>
+
+                <!-- image preview -->
+                <img id="imagePreview" class="image" #imagePreview>
+            </div>
+
+            <div class="fail-container" *ngIf="errorValue != ''">
+                <p class="fail"> {{errorValue}} </p>
+            </div>
+            <div class="fail-container" *ngIf="successValue != ''">
+                <p class="success"> {{successValue}} </p>
+            </div>
+            <div class="empty-fail" *ngIf="errorValue == '' && successValue == ''">
+            </div>
+
+            <button id="submit" type="submit" class="submit-btn" (click)="submit()">提交</button>
+        </div>
+    </div>  
+</form>
