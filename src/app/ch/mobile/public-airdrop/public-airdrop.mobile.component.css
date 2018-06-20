@@ -1,6 +1,8 @@
 .airdrop {
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
 
     background-image: url("assets/airdrop.png");
     background-position: center center;
@@ -8,18 +10,21 @@
 }
 
 .airdrop .image {
-    width: 20%;
+    width: 40%;
     height: auto;
 
     margin-left: 3%;
-    margin-top: -50px;
+    margin-right: 3%;
+    margin-top: 0px;
+
+    float: left;
 }
 
 .airdrop .general-info {
-    margin-left: 25%;
-    margin-top: -45px;
-
-    width: 60%;
+    width: 93%;
+    margin-left: 4%;
+    margin-right: 3%;
+    margin-top: 0px;
 }
 
 .airdrop .general-info p{
@@ -30,65 +35,49 @@
 
 .airdrop .botton-container {
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .airdrop .botton-container .input-group {
-    margin-left: 10%;
-    width: 52%;
-    margin-right: 0;
-}
-
-.airdrop .botton-container .input-group .part-group {
     width: 100%;
+
+    margin: 0;
+    padding: 0;
 }
 
-.airdrop .botton-container .input-group .part-group .wallet {
-    width: 60%;
-    margin-left: 15%;
+
+.airdrop .botton-container .input-group .item-group {
+    margin-left: 4%;
+    width: 92%;
+    margin-right: 4%;
 
     padding: 0;
     margin-bottom: 20px;
 }
 
-.airdrop .botton-container .input-group .part-group .wallet input{
+.airdrop .botton-container .input-group .item-group input{
     height: 30px;
 
     border-color: tomato;
     background-color: yellow;
 }
 
-.airdrop .botton-container .input-group .part-group .item-group {
-    width: 47%;
-
-    padding: 0;
-    margin-bottom: 20px;
-    margin-right: 3%;
-}
-
-.airdrop .botton-container .input-group .part-group .item-group input{
-    height: 30px;
-
-    border-color: tomato;
-    background-color: yellow;
-}
-
-.airdrop .botton-container .input-group .part-group .item-group select{
+.airdrop .botton-container .input-group .item-group select{
     height: 30px;
 
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
-    padding-left: 8px;
 
     border-color: tomato;
     background-color: yellow;
 }
 
-.airdrop .botton-container .input-group .footer {
-    margin-top: 40px;
-
-    width: 97%;
+.airdrop .botton-container .footer {
+    margin-top: 50px;
+    margin-left: 4%;
+    
+    width: 100%;
 }
 
 .footer-image {
@@ -96,70 +85,37 @@
     height: 60px;
 }
 
-.airdrop .botton-container .input-group .footer .wechat {
-    width: 31%;
-
-    padding: 0;
-    margin: 0;
-
-    float: left;
-}
-
-.airdrop .botton-container .input-group .footer .wechat .qrcode{
-    width: 100px;
-
-    padding: 0;
-    margin: 0;
-
-    float: right;
-}
-
-.airdrop .botton-container .input-group .footer .wechat .qrcode img{
+.airdrop .botton-container .footer .wechat {
     width: 100%;
-    height: auto;
 
     padding: 0;
     margin: 0;
-}
-
-.airdrop .botton-container .input-group .footer .webpage {
-    width: 36%;
-
-    padding: 0;
-    margin: 0;
-
-    text-align: center;
-}
-
-.airdrop .botton-container .input-group .footer .email {
-    width: 33%;
-
-    padding: 0;
-    margin: 0;
-
-    text-align: right;
-}
-
-.airdrop .botton-container .input-group .footer .email img{
-    margin-right: 40px;
 }
 
 .airdrop .botton-container .submit-container {
-    width: 38%;
+    width: 100%;
+    height: 70px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .airdrop .botton-container .submit-container .submit-area {
     /* width: 60%;
     height: auto; */
-    width: 300px;
-    height: 130px;
+    width: 160px;
+    height: 70px;
     
-    margin-left: 10%;
-    margin-top: 3px;
+    margin-right: 10%;
+    margin-top: 0px;
+
+    padding: 0;
 
     background-image: url("assets/download.png");
     background-position: center center;
     background-size:cover;
+
+    float: right;
 }
 
 .airdrop .botton-container .submit-container .submit-area .submit-btn {
@@ -167,12 +123,9 @@
     font-size: 30px;
 
     margin-left: 45px;
-    margin-top: 45px;
+    margin-top: 15px;
 
-    border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-radius: 4px;
     
     border: none;
     outline: none;
@@ -194,9 +147,9 @@
     top:1px;
 }
 
-.airdrop .botton-container .submit-container .submit-area .submit-btn:hover {
+/* .airdrop .botton-container .submit-container .submit-area .submit-btn:hover {
     color: cornflowerblue;
-}
+} */
 
 .airdrop .botton-container .submit-container .fail-container {
     height: 25px;
@@ -204,7 +157,7 @@
 
     margin-left: 4%;
     margin-right: 4%;
-    margin-top: 160px;
+    margin-top: -18px;
     margin-bottom: 0;
     padding: 0;
 
@@ -218,7 +171,7 @@
 }
 
 .airdrop .botton-container .submit-container .empty-fail {
-    margin-top: 160px;
+    margin-top: -18px;
     width: 100%;
     height: 25px;
 }

@@ -9,83 +9,28 @@ import { HTTPService } from './../../../service/http.service'
   styleUrls: ['./public-airdrop.component.css']
 })
 export class CHPublicAirdropComponent implements OnInit {
-    formModel: FormGroup;
-    errorValue: string = '';
-    showQRCode: boolean = false;
+    bMobile: boolean = false;
 
-    constructor(private httpService: HTTPService) { 
-        const fb = new FormBuilder();
-        this.formModel = fb.group({
-        'name': '',
-        'phone': '',
-        'mail': '',
-        'address': '',
-        'telegramid': '',
-        'wechatid': '',
-        'profession': '',
-        })
+    constructor() { 
     }
 
   ngOnInit() {
-    if (window.screen) {
-        let mainPage = document.getElementById('wholePage');
-        mainPage.style.width = window.screen.width.toString() + 'px';
-    } else {
-        let mainPage = document.getElementById('wholePage');
-        mainPage.style.width = '1280px';
-    }
+    this.bMobile = this.isMobile();
   }
 
-  onInput() {
-    this.errorValue = '';
-  }
+  isMobile() {
+    let isMobile = false;
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('Mobile') > -1 ||
+        userAgent.indexOf('Android') > -1 || 
+        userAgent.indexOf('iPhone') > -1) {
+          isMobile = true;
+    } 
 
-  submit() {
-    if (this.formModel.value.address == '') {
-        this.errorValue = '请输入钱包地址';
-        return;
+    if (userAgent.indexOf('iPad') > -1) {
+      isMobile = false;
     }
-
-    if (this.formModel.value.telegramid == '' && this.formModel.value.wechatid == '') {
-        this.errorValue = '电报和微信必须输入一个';
-        return;
-    }
-
-    if (this.formModel.value.mail != null && this.formModel.value.mail != '') {
-        let regEmail = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-        if (!regEmail.test(this.formModel.value.mail)) {
-            this.errorValue = '无效的邮箱地址';
-            return;
-        }
-    }
-
-    this.formModel.value.phone = this.formModel.value.phone.toString();
-    this.httpService.register(JSON.stringify(this.formModel.value)).subscribe(
-        output => {
-            if (output != null) {
-                this.errorValue = output;
-            }
-
-            if (this.errorValue == '') {
-                this.formModel.reset({
-                    'name': '',
-                    'phone': '',
-                    'mail': '',
-                    'address': '',
-                    'telegramid': '',
-                    'wechatid': '',
-                    'profession': '',
-                    });
-            }
-        }
-    )
-  }
-
-  showWechat() {
-      this.showQRCode = true;
-  }
-
-  hideWchat() {
-    this.showQRCode = false;
+    
+    return isMobile;
   }
 }

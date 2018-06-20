@@ -1,20 +1,33 @@
 .product {
-    background-image: url("assets/product.jpg");
-    background-size: cover;
-
     padding: 0;
-    margin: 0;
-
-    width: 100%;
-    height: 950px;
+    background-image: url("assets/product-mobile.jpg");
+    background-position: center center;
+    background-size:cover;
 }
 
-.product .image {
-    width: 39%;
-    height: auto;
+.product .brush-image {
+    width: 40%;
+    height: 30%;
 
-    margin-left: 0;
-    margin-top: -12.5%;
+    margin-left: 3%;
+    margin-top: -50px;
+    margin-right: 0;
+}
+
+.product .product-image {
+    width: 52%;
+    height: 17%;
+
+    margin-top: 10px;
+    margin-left: -5%;
+}
+
+.product .palette {
+    width: 15%;
+    height: 3.6%;
+
+    margin-top: -13%;
+    margin-left: 64%;
 }
 
 .detail {
@@ -22,31 +35,34 @@
 }
 
 .product .general-info {
-    width: 48%;
-    margin-left: 6%;
+    width: 90%;
+    margin-left: 5%;
     margin-bottom: 0px;
-    margin-right: 0;
-    margin-top: -10px;
+    margin-right: 5%;
+    margin-top: 0px;
 
     padding: 0;
 }
 
 .product .general-info .title {
     width: 100%;
-    margin-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .product .general-info .title .logoimage {
     width: 20%;
-    height: auto;
+    height: 20%;
 
     border-radius: 8px;
     margin-right: 3%;
     margin-left: 0;
+
+    float: left;
 }
 
 .product .general-info .title .info {
-    width: 72%;
+    width: 100%;
     margin-bottom: 0;
 
     padding: 0;
@@ -59,23 +75,28 @@
 }
 
 .product .general-info .detail-info {
-    width: 95%;
+    width: 100%;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .product .video-group {
-    width: 44%;
-    padding: 0;
+    width: 100%;
+    height: 500px;
     margin: 0;
+    padding: 0;
+
+    background-image: url("assets/tv.jpg");
+    background-position: center center;
+    background-size:cover;
 }
 
 .product .video-group button {
     width: 30px;
     height: 30px;
 
-    margin-left: 50%;
-    margin-top: 42px;
+    margin-left: 54%;
+    margin-top: 80px;
     margin-bottom: 0;
 
     border-radius: 15px;
@@ -103,8 +124,8 @@
     width: 372px;
     height: auto;
 
-    margin-top: -125px;
-    margin-left: 121px;
+    margin-top: -115px;
+    margin-left: 1px;
 
     padding: 0;
 

@@ -1,9 +1,21 @@
 <div id="main" class="main">
+    <div *ngIf="!bMobile">
+        <ch-app-home></ch-app-home>
+
+        <ch-concept-page></ch-concept-page>
+        
+        <ch-app-product></ch-app-product>
+        
+        <ch-app-airdrop></ch-app-airdrop>
+    </div>
+</div>
+
+<div *ngIf="bMobile" class="main">
     <ch-app-home></ch-app-home>
 
-    <ch-concept-page></ch-concept-page>
+    <ch-mobile-concept-page></ch-mobile-concept-page>
     
-    <ch-app-product></ch-app-product>
-    
-    <ch-app-airdrop></ch-app-airdrop>
+    <ch-mobile-product></ch-mobile-product>
+
+    <ch-mobile-airdrop></ch-mobile-airdrop>
 </div>

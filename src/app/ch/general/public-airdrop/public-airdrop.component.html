@@ -1,1 +1,2 @@
-<ch-computer-public-airdrop></ch-computer-public-airdrop>
+<ch-computer-public-airdrop *ngIf="!bMobile"></ch-computer-public-airdrop>
+<ch-mobile-public-airdrop *ngIf="bMobile"></ch-mobile-public-airdrop>

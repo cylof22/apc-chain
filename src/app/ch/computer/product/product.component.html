@@ -1,7 +1,7 @@
-<div class="product">
+<div class="product" id="product">
     <img class="image" src="assets/product-brush.png">
     <div class="row">
-        <div class="general-info">
+        <div class="general-info" id="generalInfo">
             <div class="row title">
                 <img class="logoimage" src="assets/logo.png">
                 <div class="info">
@@ -39,9 +39,9 @@
                 </p>
             </div>
         </div>
-        <div class="video-group">
-            <button (click)="play()"></button>
-            <video [hidden]="!playVideo" id="video" class="video" controls="controls" controlslist="nodownload">
+        <div class="video-group" id="vidoGroup">
+            <button (click)="play()" id="play"></button>
+            <video id="video" [hidden]="!playVideo" id="video" class="video" controls="controls" controlslist="nodownload">
                 <source class="source" src="assets/Demo.mp4" type="video/mp4">
             </video> 
         </div>

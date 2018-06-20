@@ -6,15 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class CHMainComponent {
+  bMobile: boolean = false;
+  bIpad: boolean = false;
   constructor() { }
 
   ngOnInit() {
-    if (window.screen) {
-      let mainPage = document.getElementById('main');
-      mainPage.style.width = (window.screen.width - this.getScrollbarWidth()) + 'px';
-    } else {
-      let mainPage = document.getElementById('main');
-      mainPage.style.width = (1280 - this.getScrollbarWidth()) + 'px';
+    this.isMobile();
+
+    if (!this.bMobile) {
+      if (window.screen) {
+        let mainPage = document.getElementById('main');
+        if (this.bIpad) {
+          mainPage.style.width = (window.screen.width) + 'px';
+        }
+        else {
+          mainPage.style.width = (window.screen.width - this.getScrollbarWidth()) + 'px';
+        }
+      } else {
+        let mainPage = document.getElementById('main');
+        mainPage.style.width = (1280 - this.getScrollbarWidth()) + 'px';
+      }
     }
   }
 
@@ -29,5 +40,20 @@ export class CHMainComponent {
     tempCtrl.remove();
 
     return scrollbarWidth;
+  }
+
+  isMobile() {
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('Mobile') > -1 ||
+        userAgent.indexOf('Android') > -1 || 
+        userAgent.indexOf('iPhone') > -1) {
+          this.bMobile = true;
+    } 
+
+    if (userAgent.indexOf('iPad') > -1) {
+      this.bMobile = false;
+      this.bIpad = true;
+    }
+  
   }
 }

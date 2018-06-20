@@ -9,27 +9,52 @@ export class CHKernelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    let isMobile = false;
-    var userAgent = navigator.userAgent;
-    if (userAgent.indexOf('Mobile') > -1 ||
-        userAgent.indexOf('Android') > -1 || 
-        userAgent.indexOf('iPhone') > -1) {
-          isMobile = true;
-    } 
-
-    if (isMobile) {
-      this.setLeftRightMarginZero('col-md-3-5');
+    if (window.screen) {
+      this.adjustPosition();
     }
   }
 
-  setLeftRightMarginZero(className: string) {
-    let elems = document.getElementsByClassName(className);
+  adjustPosition() {
+    // adjust stickiness group's position according to aigroup's position
+    let aiGroupCtrl = document.getElementById('aiGroup');
+    let offset = window.screen.width * 0.1 + aiGroupCtrl.clientHeight;
+    let stickinessCtrl = document.getElementById('stickinessGroup');
+    stickinessCtrl.style.marginTop = (-offset).toString() + 'px';
 
-    for (let i = 0; i < elems.length; i++) {
-      let elem = <HTMLElement>elems[i];
-      elem.style.marginLeft = '0';
-      elem.style.marginRight = '-2';
-      elem.style.width = '100%';
+    // adjust controls' position for pad
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('iPad') > -1) {
+      let screenWidth = window.screen.width;
+      let offsetValue = (screenWidth - 1280) * 0.1;
+
+      let weight = 1.6;
+      if (offsetValue > 0) {
+        weight = -0.5;
+      } 
+
+      // for sharing group
+      let ctrlId = 'sharingGroup';
+      let ctrl = document.getElementById(ctrlId);
+      ctrl.style.marginTop = (-screenWidth * 0.078 + offsetValue * weight).toString() + 'px';
+
+      weight = 1;
+      if (offsetValue > 0) {
+        weight = 0.5;
+      }
+
+      ctrlId = 'jiliGroup';
+      ctrl = document.getElementById(ctrlId);
+      ctrl.style.marginTop = (-screenWidth * 0.13 + offsetValue * weight).toString() + 'px';
+
+      ctrlId = 'aiGroup';
+      ctrl = document.getElementById(ctrlId);
+      ctrl.style.marginTop = (-screenWidth * 0.05 + offsetValue * weight).toString() + 'px';
+
+      stickinessCtrl.style.marginTop = (-offset).toString() + 'px';
+
+      ctrlId = 'copyrightGroup';
+      ctrl = document.getElementById(ctrlId);
+      ctrl.style.marginTop = (screenWidth * 0.039).toString() + 'px';
     }
   }
 }

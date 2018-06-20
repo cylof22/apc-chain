@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CHComputerModule } from './computer/ch.computer.module'
+import { CHMobileModule } from './mobile/ch.mobile.module'
 import { NavbarModule } from './../navbar/navbar.module'
 
 import { CHMainComponent } from './main/main.component';
@@ -27,6 +28,7 @@ import { CHPublicAirdropComponent } from './general/public-airdrop/public-airdro
         FormsModule,
         ReactiveFormsModule,
         CHComputerModule,
+        CHMobileModule,
         NavbarModule,
         RouterModule.forChild([
             {path: 'ch/airdrop', component: CHPublicAirdropComponent},
