@@ -62,10 +62,6 @@ export class CHCompPublicAirdropComponent implements OnInit {
     this.formModel.value.phone = this.formModel.value.phone.toString();
     this.httpService.register(JSON.stringify(this.formModel.value)).subscribe(
         output => {
-            if (output != null) {
-                this.errorValue = output;
-            }
-
             if (this.errorValue == '') {
                 this.formModel.reset({
                     'name': '',
@@ -76,6 +72,11 @@ export class CHCompPublicAirdropComponent implements OnInit {
                     'wechatid': '',
                     'profession': '',
                     });
+            }
+        },
+        error => {
+            if (error != null) {
+                this.errorValue = error.error['text'];
             }
         }
     )

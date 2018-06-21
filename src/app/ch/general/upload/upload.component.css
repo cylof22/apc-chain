@@ -54,17 +54,18 @@
 }
 
 .upload .input-group .fail-container {
-    margin-top: -8px;
-}
-
-.upload .input-group .fail-container .fail {
     height: 25px;
-    width: auto;
+    width: 99%;
 
-    margin: 0;
+    margin-top: -8px;
+    margin-bottom: 0;
     padding: 0;
 
     text-align: center;
+}
+
+.upload .input-group .fail-container .fail {
+    border-radius: 4px;
     background-color: red;
 }
 
@@ -135,4 +136,78 @@
 
     margin-left: 0;
     margin-right: 5px;
+}
+
+.upload .footer {
+    width: 60%;
+
+    margin-top: 40px;
+    margin-left: 20%;
+}
+
+.footer-image {
+    width: 60px;
+    height: 60px;
+}
+
+.upload .footer .wechat {
+    width: 31%;
+
+    padding: 0;
+    margin: 0;
+
+    float: left;
+}
+
+.upload .mobile-footer {
+    margin-top: 40px;
+    margin-left: 4%;
+    
+    width: 100%;
+}
+
+.upload .mobile-footer .mobile-wechat {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .footer .wechat .qrcode{
+    width: 100px;
+
+    padding: 0;
+    margin: 0;
+
+    float: right;
+}
+
+.upload .footer .wechat .qrcode img{
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .footer .webpage {
+    width: 36%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+
+.upload .footer .email {
+    width: 33%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: right;
+}
+
+.upload .footer .email img{
+    margin-right: 40px;
 }

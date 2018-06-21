@@ -13,6 +13,8 @@ export class ENUploadComponent implements OnInit {
     errorValue: string = '';
     successValue: string = '';
     showReselectCtrl: boolean = false;
+    showQRCode: boolean = false;
+    bMobile: boolean = false;
 
     constructor(private httpService: HTTPService) { 
         const fb = new FormBuilder();
@@ -24,6 +26,7 @@ export class ENUploadComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.bMobile = this.isMobile();
     }
 
     onInput() {
@@ -32,30 +35,31 @@ export class ENUploadComponent implements OnInit {
 
     submit() {
         if (this.formModel.value.wechatid == '') {
-            this.errorValue = 'Please input Wechat id';
+            this.errorValue = '请输入微信账号';
             return;
         }
 
         let img = document.getElementById("imagePreview");
         this.formModel.value.picData = img.getAttribute("src");
         if (this.formModel.value.picData == null || this.formModel.value.picData == '') {
-            this.errorValue = 'Please select a picture';
+            this.errorValue = '请选择图片';
             return;
         }
 
         this.httpService.upload(JSON.stringify(this.formModel.value)).subscribe(
             output => {
-                if (output != null) {
-                    this.errorValue = output;
-                }
-
                 if (this.errorValue == '') {
-                    this.successValue = 'success';
+                    this.successValue = '上传成功';
                     this.formModel.reset({
                         'address': '',
                         'wechatid': '',
                         'picData': ''
                         });
+                }
+            },
+            error => {
+                if (error != null) {
+                    this.errorValue = error.error['text'];
                 }
             }
         )
@@ -103,5 +107,29 @@ export class ENUploadComponent implements OnInit {
 
     removeReselectBtn() {
         this.showReselectCtrl = false;
+    }
+
+    showWechat() {
+        this.showQRCode = true;
+    }
+  
+    hideWchat() {
+      this.showQRCode = false;
+    }
+
+    isMobile() {
+        let isMobile = false;
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf('Mobile') > -1 ||
+            userAgent.indexOf('Android') > -1 || 
+            userAgent.indexOf('iPhone') > -1) {
+              isMobile = true;
+        } 
+    
+        if (userAgent.indexOf('iPad') > -1) {
+          isMobile = false;
+        }
+        
+        return isMobile;
     }
 }

@@ -13,6 +13,8 @@ export class CHUploadComponent implements OnInit {
     errorValue: string = '';
     successValue: string = '';
     showReselectCtrl: boolean = false;
+    showQRCode: boolean = false;
+    bMobile: boolean = false;
 
     constructor(private httpService: HTTPService) { 
         const fb = new FormBuilder();
@@ -24,6 +26,7 @@ export class CHUploadComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.bMobile = this.isMobile();
     }
 
     onInput() {
@@ -45,10 +48,6 @@ export class CHUploadComponent implements OnInit {
 
         this.httpService.upload(JSON.stringify(this.formModel.value)).subscribe(
             output => {
-                if (output != null) {
-                    this.errorValue = output;
-                }
-
                 if (this.errorValue == '') {
                     this.successValue = '上传成功';
                     this.formModel.reset({
@@ -56,6 +55,11 @@ export class CHUploadComponent implements OnInit {
                         'wechatid': '',
                         'picData': ''
                         });
+                }
+            },
+            error => {
+                if (error != null) {
+                    this.errorValue = error.error['text'];
                 }
             }
         )
@@ -103,5 +107,29 @@ export class CHUploadComponent implements OnInit {
 
     removeReselectBtn() {
         this.showReselectCtrl = false;
+    }
+
+    showWechat() {
+        this.showQRCode = true;
+    }
+  
+    hideWchat() {
+      this.showQRCode = false;
+    }
+
+    isMobile() {
+        let isMobile = false;
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf('Mobile') > -1 ||
+            userAgent.indexOf('Android') > -1 || 
+            userAgent.indexOf('iPhone') > -1) {
+              isMobile = true;
+        } 
+    
+        if (userAgent.indexOf('iPad') > -1) {
+          isMobile = false;
+        }
+        
+        return isMobile;
     }
 }

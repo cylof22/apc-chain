@@ -16,8 +16,9 @@ export class CHKernelComponent implements OnInit {
 
   adjustPosition() {
     // adjust stickiness group's position according to aigroup's position
-    let aiGroupCtrl = document.getElementById('aiGroup');
-    let offset = window.screen.width * 0.1 + aiGroupCtrl.clientHeight;
+    let aiInfo = document.getElementById('aiInfo')
+    let imageHeight = window.screen.width * 0.22; // 0.22 = 0.297 * 716/967(宽 * 像素高/像素宽)
+    let offset = (aiInfo.offsetHeight + imageHeight) * 0.7;
     let stickinessCtrl = document.getElementById('stickinessGroup');
     stickinessCtrl.style.marginTop = (-offset).toString() + 'px';
 

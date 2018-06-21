@@ -78,6 +78,87 @@
     text-align: center;
     background-color: green;
 }
+.upload {
+    background-color: rgb(81, 118, 124);
+
+    margin: 0;
+    padding: 15px;
+
+    color: white;
+}
+
+.upload .general-info {
+    padding-top: 60px;
+
+    text-align: center;
+}
+
+.upload .input-group {
+    width: 330px;
+    margin: auto;
+}
+
+.upload .input-group .item-group {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.upload .input-group .item-group input{
+    width: 325px;
+    height: 30px;
+}
+
+.upload .input-group .submit-btn {
+    width: 99%;
+    height:30px;
+
+    margin-top: 3px;
+
+    border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    border: none;
+    outline: none;
+
+    background-color: cornflowerblue;
+
+    /* text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627; */
+}
+
+.upload .input-group .submit-btn:active {
+    position:relative;
+    top:1px;
+}
+
+.upload .input-group .fail-container {
+    height: 25px;
+    width: 99%;
+
+    margin-top: -8px;
+    margin-bottom: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.upload .input-group .fail-container .fail {
+    border-radius: 4px;
+    background-color: red;
+}
+
+.upload .input-group .fail-container .success {
+    height: 25px;
+    width: auto;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    background-color: green;
+}
 
 .upload .input-group .empty-fail {
     margin-top: -8px;
@@ -135,4 +216,195 @@
 
     margin-left: 0;
     margin-right: 5px;
+}
+
+.upload .footer {
+    width: 60%;
+
+    margin-top: 40px;
+    margin-left: 20%;
+}
+
+.footer-image {
+    width: 60px;
+    height: 60px;
+}
+
+.upload .footer .wechat {
+    width: 31%;
+
+    padding: 0;
+    margin: 0;
+
+    float: left;
+}
+
+.upload .mobile-footer {
+    margin-top: 40px;
+    margin-left: 4%;
+    
+    width: 100%;
+}
+
+.upload .mobile-footer .mobile-wechat {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .footer .wechat .qrcode{
+    width: 100px;
+
+    padding: 0;
+    margin: 0;
+
+    float: right;
+}
+
+.upload .footer .wechat .qrcode img{
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .footer .webpage {
+    width: 36%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+
+.upload .footer .email {
+    width: 33%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: right;
+}
+
+.upload .footer .email img{
+    margin-right: 40px;
+}
+
+.upload .input-group .empty-fail {
+    margin-top: -8px;
+    width: 100%;
+    height: 25px;
+}
+
+.upload .input-group .image-container {
+    width: 100%;
+    margin: 0;
+
+    padding: 0;
+
+    text-align: center;
+}
+
+.upload .input-group .image-container .selectBtn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+
+    border-radius: 25px;
+    background-color: cornflowerblue;
+
+    background-image: url('/assets/select.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.image-container .reselect-container {
+    position: relative;
+    top: 40%;
+}
+
+.image-container .reselect-container .reselect-Btn {
+    position: absolute;
+    left: 35%;
+
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+
+    margin-top: -30px;
+
+    border-radius: 20px;
+}
+
+.image-container .image {
+    width: 95%;
+    height: auto;
+
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.upload .footer {
+    margin-top: 40px;
+
+    width: 97%;
+}
+
+.footer-image {
+    width: 60px;
+    height: 60px;
+}
+
+.upload .footer .wechat {
+    width: 31%;
+
+    padding: 0;
+    margin: 0;
+
+    float: left;
+}
+
+.upload .footer .wechat .qrcode{
+    width: 100px;
+
+    padding: 0;
+    margin: 0;
+
+    float: right;
+}
+
+.upload .footer .wechat .qrcode img{
+    width: 100%;
+    height: auto;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .footer .webpage {
+    width: 36%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+
+.upload .footer .email {
+    width: 33%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: right;
+}
+
+.upload .footer .email img{
+    margin-right: 40px;
 }
