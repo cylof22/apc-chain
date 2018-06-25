@@ -151,7 +151,7 @@
 }
 
 .upload .footer .wechat {
-    width: 31%;
+    width: 25%;
 
     padding: 0;
     margin: 0;
@@ -168,6 +168,14 @@
 
 .upload .mobile-footer .mobile-wechat {
     width: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+
+.upload .mobile-footer .mobile-wechat p img{
+    width: 50%;
+    height: auto;
 
     padding: 0;
     margin: 0;
@@ -190,8 +198,17 @@
     margin: 0;
 }
 
+.upload .footer .publicAcc {
+    width: 15%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+
 .upload .footer .webpage {
-    width: 36%;
+    width: 39%;
 
     padding: 0;
     margin: 0;
@@ -200,7 +217,7 @@
 }
 
 .upload .footer .email {
-    width: 33%;
+    width: 18%;
 
     padding: 0;
     margin: 0;

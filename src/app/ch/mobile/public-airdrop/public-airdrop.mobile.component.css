@@ -92,6 +92,10 @@
     margin: 0;
 }
 
+.airdrop .botton-container .footer .wechat p img{
+    width: 50%;
+}
+
 .airdrop .botton-container .submit-container {
     width: 100%;
     height: 70px;
