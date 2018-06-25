@@ -23,7 +23,13 @@ export class CHProductComponent implements OnInit {
     let vedio = <HTMLVideoElement>document.getElementById('video');
     if (vedio != null) {
       vedio.play();
+      vedio.webkitEnterFullscreen();
     }
+  }
+
+  playEnded() {
+    document.webkitCancelFullScreen();
+    this.playVideo = false;
   }
 
   adjustPosition() {

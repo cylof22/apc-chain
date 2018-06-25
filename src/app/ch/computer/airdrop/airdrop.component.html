@@ -81,13 +81,18 @@
 
                 <div class="row footer">
                     <div class="row wechat">
-                        <div (mouseenter)="showWechat()" (mouseleave)="hideWchat()">
+                        <div class="show" (mouseenter)="showWechat()" (mouseleave)="hideWchat()">
                             <img class="rounded-circle footer-image" src="assets/wechat_icon.jpg" alt="Generic placeholder image">
-                            <p>添加微信</p>
+                            <p>客服微信</p>
                         </div>
                         <div [hidden]="!showQRCode" class="qrcode">
                             <img src="assets/qrcode.jpg">
                         </div>
+                    </div>
+
+                    <div class="publicAcc">
+                        <img class="rounded-circle footer-image" src="assets/publicAcc.jpg" alt="Generic placeholder image">
+                        <p>Noldor链</p>
                     </div>
 
                     <div class="webpage">

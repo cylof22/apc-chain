@@ -97,7 +97,7 @@
 }
 
 .airdrop .botton-container .input-group .footer .wechat {
-    width: 31%;
+    width: 25%;
 
     padding: 0;
     margin: 0;
@@ -105,8 +105,13 @@
     float: left;
 }
 
+.airdrop .botton-container .input-group .footer .wechat .show{
+    padding: 0;
+    margin: 0;
+}
+
 .airdrop .botton-container .input-group .footer .wechat .qrcode{
-    width: 100px;
+    width: 90px;
 
     padding: 0;
     margin: 0;
@@ -122,8 +127,17 @@
     margin: 0;
 }
 
+.airdrop .botton-container .input-group .footer .publicAcc {
+    width: 15%;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+}
+
 .airdrop .botton-container .input-group .footer .webpage {
-    width: 36%;
+    width: 39%;
 
     padding: 0;
     margin: 0;
@@ -132,7 +146,7 @@
 }
 
 .airdrop .botton-container .input-group .footer .email {
-    width: 33%;
+    width: 18%;
 
     padding: 0;
     margin: 0;
@@ -141,7 +155,7 @@
 }
 
 .airdrop .botton-container .input-group .footer .email img{
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .airdrop .botton-container .submit-container {
