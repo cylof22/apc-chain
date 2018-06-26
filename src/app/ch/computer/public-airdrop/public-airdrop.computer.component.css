@@ -60,7 +60,7 @@
     height: 30px;
 
     border-color: tomato;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .airdrop .botton-container .input-group .part-group .item-group {
@@ -75,7 +75,7 @@
     height: 30px;
 
     border-color: tomato;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .airdrop .botton-container .input-group .part-group .item-group select{
@@ -87,7 +87,7 @@
     padding-left: 8px;
 
     border-color: tomato;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .airdrop .botton-container .input-group .footer {
