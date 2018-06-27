@@ -3,8 +3,8 @@
     padding: 0;
 
     background-image: url("assets/airdrop.jpg");
-    background-position: center center;
-    background-size:cover;
+    /* background-position: 100% center; */
+    background-size:100% 100%;
 }
 
 .airdrop .image {

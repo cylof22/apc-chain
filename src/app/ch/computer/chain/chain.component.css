@@ -40,6 +40,8 @@
     margin-left: 8%;
     margin-top: 10px;
     padding: 0;
+
+    overflow: auto;
 }
 
 .chain .info-container .footer-container .download {

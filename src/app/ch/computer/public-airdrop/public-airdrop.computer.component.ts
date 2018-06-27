@@ -29,7 +29,7 @@ export class CHCompPublicAirdropComponent implements OnInit {
   ngOnInit() {
     if (window.screen) {
         let mainPage = document.getElementById('wholePage');
-        mainPage.style.width = window.screen.width.toString() + 'px';
+        //mainPage.style.width = window.screen.width.toString() + 'px';
     } else {
         let mainPage = document.getElementById('wholePage');
         mainPage.style.width = '1280px';

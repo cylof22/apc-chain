@@ -1,20 +1,10 @@
 .concept {
     background-image: url("assets/concept.jpg");
     /* background-position: center center; */
-    background-size:cover;
+    background-size:100% 100%;
 
     padding: 0;
     margin: 0;
 
     width: 100%;
-}
-
-.test1 {
-    background-color: black;
-    border-style: solid;
-}
-
-.test2 {
-    background-color: red;
-    border-style: solid;
 }

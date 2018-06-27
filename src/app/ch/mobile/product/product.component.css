@@ -87,8 +87,8 @@
     padding: 0;
 
     background-image: url("assets/tv.jpg");
-    background-position: center center;
-    background-size:cover;
+    /* background-position: center center; */
+    background-size:100% 100%;
 }
 
 .product .video-group button {
@@ -121,7 +121,7 @@
 }
 
 .product .video-group .video {
-    width: 372px;
+    width: 368px;
     height: auto;
 
     margin-top: -115px;

@@ -9,10 +9,10 @@ import { HTTPService } from './../../../service/http.service'
   styleUrls: ['./public-airdrop.component.css']
 })
 export class CHPublicAirdropComponent implements OnInit {
-    bMobile: boolean = false;
+  bMobile: boolean = false;
 
-    constructor() { 
-    }
+  constructor() { 
+  }
 
   ngOnInit() {
     this.bMobile = this.isMobile();

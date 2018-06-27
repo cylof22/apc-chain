@@ -12,10 +12,7 @@ export class CHProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    var userAgent = navigator.userAgent;
-    if (userAgent.indexOf('iPad') > -1 && window.screen) {
-      this.adjustPosition();
-    }
+    this.adjustPosition();
   }
 
   play() {
@@ -33,38 +30,62 @@ export class CHProductComponent implements OnInit {
   }
 
   adjustPosition() {
-    let screenWidth = window.screen.width;
-    let offsetValue = screenWidth - 1280;
-
-    // change height
+    // height of background image
     let pageCtrl = document.getElementById('product');
-    if (offsetValue < 0) {
-      pageCtrl.style.height = (pageCtrl.clientHeight + offsetValue * 0.4).toString() + 'px';
-    } else {
-      pageCtrl.style.height = (pageCtrl.clientHeight + offsetValue * 0.2).toString() + 'px';
+    let screenWidth = window.screen.width;
+    if (this.isIPad()) {
+      screenWidth = pageCtrl.offsetWidth;
     }
+    let backgroundHeight = screenWidth * 3059 / 4000;
 
-    // adjust stickiness group's position according to aigroup's position
+    // set current page height to background image height
+    pageCtrl.style.height = backgroundHeight.toString() + 'px';
+
+    // reset general info control's height
+    let topBrushHeight = this.getTopBrushHeight(screenWidth);
+    this.setGeneralInfoHeight(backgroundHeight, topBrushHeight);
+    
+    // set margin top of the button that is used to play video
+    this.adjustPlayButton(backgroundHeight, topBrushHeight);
+  }
+
+  setGeneralInfoHeight(pageHeight, brushHeight: number) {
+    // the height of left panel: top brush, general info and a part of Airdrop image
+    // and it shouldn't be larger than page height
+    let airdropImageHeight = 50 + 50; // one 50 is height of the image and the other is margin top
+    let idealInfoHeight = pageHeight - brushHeight - airdropImageHeight + 10; // -10 is its margin top
+    
+    // set general info's height
     let generalCtrl = document.getElementById('generalInfo');
-    let newWidth = screenWidth * 0.48 - offsetValue * 0.4;
-    generalCtrl.style.width = newWidth.toString() + 'px';
+    if (generalCtrl.offsetHeight > idealInfoHeight) {
+      generalCtrl.style.height = idealInfoHeight.toString() + 'px';
+      generalCtrl.style.overflowY = 'auto';
+    }
+  }
 
-    let vedioCtrl = document.getElementById('vidoGroup');
-    let vedioWidth = screenWidth - newWidth - screenWidth * 0.06; // 0.06 means margin left
-    vedioCtrl.style.width = vedioWidth.toString() + 'px';
+  getTopBrushHeight(screenWidth) {
+    let imageWidth = screenWidth * 0.39; 
+    let imageHeight = imageWidth * 1539 / 1544; // 1539/1544 is pixel of height / pixel / width
+    let heightInCurrentPage = imageHeight - screenWidth * 0.125; // screenWidth * -0.125 is margin top
 
-    let playCtrl = document.getElementById('play');
-    if (offsetValue < 0) {
-      playCtrl.style.marginLeft = (vedioWidth/2 + Math.abs(offsetValue) * 0.1).toString() + 'px';
+    return heightInCurrentPage;
+  }
+
+  adjustPlayButton(pageHeight, brushHeight: number) {
+    let idealMarginTop = 0.37 * pageHeight;
+    let brushHeightInPage = brushHeight * (1 - 0.125); // -0.125 is margin top of brush
+    let realMarginTop = idealMarginTop - brushHeightInPage -30/2; // 30 is height of play button
+
+    let playButton = document.getElementById('play');
+    playButton.style.marginTop = realMarginTop.toString() + 'px';
+  }
+
+  isIPad() {
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf('iPad') > -1) {
+      return true;
     } else {
-      playCtrl.style.marginLeft = (vedioWidth/2 + Math.abs(offsetValue) * 0.2).toString() + 'px';
+      return false;
     }
-
-    let video = document.getElementById('video');
-    let weight = 0.3;
-    if (offsetValue > 0) {
-      weight = 0.4;
-    }
-    video.style.marginLeft = (vedioWidth/4 + offsetValue * weight).toString() + 'px';
   }
 }

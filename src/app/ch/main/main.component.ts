@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { Observable } from 'rxjs'
 
 @Component({
   selector: 'ch-main-page',
@@ -11,13 +12,29 @@ export class CHMainComponent {
   constructor() { }
 
   ngOnInit() {
+    // Observable.fromEvent(window, 'scroll').subscribe((event) => {  
+    //   // this.onWindowsScroll();  
+    // }); 
+
     this.isMobile();
+
+    let mainPage = document.getElementById('main');
+    if (this.bIpad) {
+      if (window.screen.width < window.screen.height && 
+          window.screen.width == mainPage.offsetWidth) {
+            mainPage.style.width = (window.screen.height) + 'px';
+            mainPage.style.zoom = (window.screen.width/window.screen.height).toString();
+          }
+    }
 
     if (!this.bMobile) {
       if (window.screen) {
-        let mainPage = document.getElementById('main');
         if (this.bIpad) {
-          mainPage.style.width = (window.screen.width) + 'px';
+          if (window.screen.width < window.screen.height && 
+              window.screen.width == mainPage.offsetWidth) {
+                mainPage.style.width = (window.screen.height) + 'px';
+                mainPage.style.zoom = (window.screen.width/window.screen.height).toString();
+          }
         }
         else {
           mainPage.style.width = (window.screen.width - this.getScrollbarWidth()) + 'px';

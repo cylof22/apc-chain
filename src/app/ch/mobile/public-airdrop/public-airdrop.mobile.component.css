@@ -9,7 +9,11 @@
     background-size:cover;
 }
 
-.airdrop .image {
+.airdrop .top {
+    margin-bottom: 10px;
+}
+
+.airdrop .top .image {
     width: 40%;
     height: auto;
 
@@ -20,25 +24,26 @@
     float: left;
 }
 
-.airdrop .general-info {
+.airdrop .top .general-info {
     width: 93%;
     margin-left: 4%;
     margin-right: 3%;
     margin-top: 0px;
 }
 
-.airdrop .general-info p{
+.airdrop .top .general-info p{
     padding: 0;
 
     color: tomato;
 }
 
-.airdrop .botton-container {
+.airdrop .bottom-container {
     width: 100%;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
-.airdrop .botton-container .input-group {
+.airdrop .bottom-container .input-group {
     width: 100%;
 
     margin: 0;
@@ -46,7 +51,7 @@
 }
 
 
-.airdrop .botton-container .input-group .item-group {
+.airdrop .bottom-container .input-group .item-group {
     margin-left: 4%;
     width: 92%;
     margin-right: 4%;
@@ -55,14 +60,14 @@
     margin-bottom: 20px;
 }
 
-.airdrop .botton-container .input-group .item-group input{
+.airdrop .bottom-container .input-group .item-group input{
     height: 30px;
 
     border-color: tomato;
     /* background-color: yellow; */
 }
 
-.airdrop .botton-container .input-group .item-group select{
+.airdrop .bottom-container .input-group .item-group select{
     height: 30px;
 
     padding-top: 0;
@@ -73,7 +78,7 @@
     /* background-color: yellow; */
 }
 
-.airdrop .botton-container .footer {
+.airdrop .bottom-container .footer {
     margin-top: 50px;
     margin-left: 4%;
     
@@ -85,18 +90,18 @@
     height: 60px;
 }
 
-.airdrop .botton-container .footer .wechat {
+.airdrop .bottom-container .footer .wechat {
     width: 100%;
 
     padding: 0;
     margin: 0;
 }
 
-.airdrop .botton-container .footer .wechat p img{
+.airdrop .bottom-container .footer .wechat p img{
     width: 50%;
 }
 
-.airdrop .botton-container .submit-container {
+.airdrop .bottom-container .submit-container {
     width: 100%;
     height: 70px;
 
@@ -104,7 +109,7 @@
     padding: 0;
 }
 
-.airdrop .botton-container .submit-container .submit-area {
+.airdrop .bottom-container .submit-container .submit-area {
     /* width: 60%;
     height: auto; */
     width: 160px;
@@ -122,7 +127,7 @@
     float: right;
 }
 
-.airdrop .botton-container .submit-container .submit-area .submit-btn {
+.airdrop .bottom-container .submit-container .submit-area .submit-btn {
     width: auto;
     font-size: 30px;
 
@@ -146,7 +151,7 @@
     background-color:#5cbf2a;
 } */
 
-.airdrop .botton-container .submit-container .submit-area .submit-btn:active {
+.airdrop .bottom-container .submit-container .submit-area .submit-btn:active {
     position:relative;
     top:1px;
 }
@@ -155,7 +160,7 @@
     color: cornflowerblue;
 } */
 
-.airdrop .botton-container .submit-container .fail-container {
+.airdrop .bottom-container .submit-container .fail-container {
     height: 25px;
     width: auto;
 
@@ -168,13 +173,13 @@
     text-align: center;
 }
 
-.airdrop .botton-container .submit-container .fail-container .fail {
+.airdrop .bottom-container .submit-container .fail-container .fail {
     border-radius: 4px;
 
     background-color: red;
 }
 
-.airdrop .botton-container .submit-container .empty-fail {
+.airdrop .bottom-container .submit-container .empty-fail {
     margin-top: -18px;
     width: 100%;
     height: 25px;

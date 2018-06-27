@@ -31,7 +31,7 @@ import { CHPublicAirdropComponent } from './general/public-airdrop/public-airdro
         CHMobileModule,
         NavbarModule,
         RouterModule.forChild([
-            {path: 'ch/airdrop', component: CHPublicAirdropComponent},
+            // {path: 'ch/airdrop', component: CHPublicAirdropComponent},
             {path: 'ch/upload', component: CHUploadComponent},
     ])
     ],
