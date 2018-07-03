@@ -38,18 +38,21 @@ export class CHUploadComponent implements OnInit {
         this.errorValue = '';
     }
 
-    submit() {
+    submit(submitBtn:HTMLButtonElement) {
+        submitBtn.disabled = true;
         this.successValue = '';
         this.errorValue = '';
         
         if (this.formModel.value.wechatid == '') {
             this.errorValue = '请输入微信账号';
+            submitBtn.disabled = false;
             return;
         }
 
         let img = document.getElementById("imagePreview");
         this.formModel.value.picData = img.getAttribute("src");
         if (this.formModel.value.picData == null || this.formModel.value.picData == '') {
+            submitBtn.disabled = false;
             this.errorValue = '请选择图片';
             return;
         }
@@ -60,6 +63,7 @@ export class CHUploadComponent implements OnInit {
                 if (this.errorValue == '') {
                     this.successValue = '上传成功';
                     this.errorValue = '';
+                    submitBtn.disabled = false;
                 }
             },
             error => {
@@ -70,6 +74,7 @@ export class CHUploadComponent implements OnInit {
                     }
                     this.errorValue = errorInfo;
                     this.successValue = '';
+                    submitBtn.disabled = false;
                 }
             }
         )

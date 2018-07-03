@@ -54,7 +54,7 @@
             <div class="empty-fail" *ngIf="errorValue == '' && successValue == ''">
             </div>
 
-            <button id="submit" type="submit" class="submit-btn" (click)="submit()">提交</button>
+            <button id="submit" type="submit" class="submit-btn" (click)="submit(submitBtn)" #submitBtn>提交</button>
         </div>
         <div class="general-info" id="generalInfo">
             <p>诺多链正在有奖招募优秀图片。经诺多团队确认为有效的图片作品，可以获得相应的EF代币奖励，并将成为诺多链的一员。具体要求如下：
