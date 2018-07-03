@@ -1,9 +1,6 @@
 <form [formGroup]="formModel">
       <div class="upload">
-        <div class="general-info">
-            <h4>上传图片</h4>
-            <p>每人最多上传5张照片。每次上传会给每位2000EF，请确保您有合法的数字钱包。如何你有任何意见或者疑虑，请将其发布到我们的<a href="https://t.me/joinchat/JNUf5RIaKKAe60oIxkU7_g">电报组</a>或者联系微信号sky487746。
-        </div>
+        <h4>你传图，我买单</h4>
         <div class="row input-group">
             <div id="fileSelGroup">
                 <input type="file" name="imagePath" id="imagePath" style="display: none;"
@@ -39,8 +36,8 @@
                         *ngIf="imagePreview.src == ''">
                 
                 <!-- select again -->
-                <div *ngIf="showReselectCtrl" class="reselect-container">
-                    <button class="reselect-Btn" (click)="selectFile()">Reselect
+                <div *ngIf="imagePreview.src != ''" class="reselect-container">
+                    <button class="reselect-Btn" (click)="selectFile()">重选
                     </button>
                 </div>
 
@@ -59,11 +56,29 @@
 
             <button id="submit" type="submit" class="submit-btn" (click)="submit()">提交</button>
         </div>
+        <div class="general-info" id="generalInfo">
+            <p>诺多链正在有奖招募优秀图片。经诺多团队确认为有效的图片作品，可以获得相应的EF代币奖励，并将成为诺多链的一员。具体要求如下：
+            <li class="font-bold">有效的微信账号；</li>
+            <li>合法的数字钱包；</li>
+            <li>每人最多上传5张；</li>
+            <li>上传者拥有图片版权；</li>
+            <li>图片合法，不涉黄、不涉密、不涉及政治、不涉及敏感话题等。</li>
+            </p>
+            <p>每张图片奖励具体如下（第一轮：2018年7月2日21点 ~ 2018年7月6日21点）：
+            <li>特等奖 2名 100万EF</li>
+            <li>一等奖 10名 10万EF</li>
+            <li>二等奖 50名 5万EF</li>
+            <li>三等奖 100名 2万EF</li>
+            <li>阳光普照 5000EF</li>
+            </p>
+            <p>本活动最终解释权归诺多链所有。</p>
+        </div>
+        <div class="fenge"></div>
         <div *ngIf="!bMobile" class="row footer">
             <div class="row wechat">
                 <div (mouseenter)="showWechat()" (mouseleave)="hideWchat()">
                     <img class="rounded-circle footer-image" src="assets/wechat_icon.jpg" alt="Generic placeholder image">
-                    <p>添加微信</p>
+                    <p>客服微信</p>
                 </div>
                 <div [hidden]="!showQRCode" class="qrcode">
                     <img src="assets/qrcode.jpg">
@@ -86,12 +101,12 @@
             </div>
         </div>
         <div *ngIf="bMobile" class="mobile-footer">
-            <p>网址：开发中</p>
+            <p>产品主页：开发中</p>
             <p>邮箱：service@elforce.net</p>
             <p>微信公众号：Noldor链</p>
 
             <div class="row mobile-wechat">
-                <p>微信：<img src="assets/qrcode.jpg"></p>
+                <p>客服微信：<img src="assets/qrcode.jpg"></p>
             </div>
         </div>
     </div>  

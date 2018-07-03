@@ -19,31 +19,32 @@ export class CHMainComponent {
     this.isMobile();
 
     let mainPage = document.getElementById('main');
-    if (this.bIpad) {
-      if (window.screen.width < window.screen.height && 
-          window.screen.width == mainPage.offsetWidth) {
-            mainPage.style.width = (window.screen.height) + 'px';
-            mainPage.style.zoom = (window.screen.width/window.screen.height).toString();
-          }
-    }
+    mainPage.style.height = window.innerHeight + 'px';
+    // if (this.bIpad) {
+    //   if (window.screen.width < window.screen.height && 
+    //       window.screen.width == mainPage.offsetWidth) {
+    //         mainPage.style.width = (window.screen.height) + 'px';
+    //         mainPage.style.scale = (window.screen.width/window.screen.height).toString();
+    //       }
+    // }
 
-    if (!this.bMobile) {
-      if (window.screen) {
-        if (this.bIpad) {
-          if (window.screen.width < window.screen.height && 
-              window.screen.width == mainPage.offsetWidth) {
-                mainPage.style.width = (window.screen.height) + 'px';
-                mainPage.style.zoom = (window.screen.width/window.screen.height).toString();
-          }
-        }
-        else {
-          mainPage.style.width = (window.screen.width - this.getScrollbarWidth()) + 'px';
-        }
-      } else {
-        let mainPage = document.getElementById('main');
-        mainPage.style.width = (1280 - this.getScrollbarWidth()) + 'px';
-      }
-    }
+    // if (!this.bMobile) {
+    //   if (window.screen) {
+    //     if (this.bIpad) {
+    //       if (window.screen.width < window.screen.height && 
+    //           window.screen.width == mainPage.offsetWidth) {
+    //             mainPage.style.width = (window.screen.height) + 'px';
+    //             mainPage.style.zoom = (window.screen.width/window.screen.height).toString();
+    //       }
+    //     }
+    //     else {
+    //       mainPage.style.width = (window.screen.width - this.getScrollbarWidth()) + 'px';
+    //     }
+    //   } else {
+    //     let mainPage = document.getElementById('main');
+    //     mainPage.style.width = (1280 - this.getScrollbarWidth()) + 'px';
+    //   }
+    // }
   }
 
   getScrollbarWidth() {

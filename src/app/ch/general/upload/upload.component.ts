@@ -27,13 +27,21 @@ export class CHUploadComponent implements OnInit {
 
     ngOnInit() {
         this.bMobile = this.isMobile();
+        if (!this.bMobile) {
+            let generalCtrl = document.getElementById('generalInfo');
+            generalCtrl.style.width = '580px';
+        }
     }
 
     onInput() {
+        this.successValue = '';
         this.errorValue = '';
     }
 
     submit() {
+        this.successValue = '';
+        this.errorValue = '';
+        
         if (this.formModel.value.wechatid == '') {
             this.errorValue = '请输入微信账号';
             return;
@@ -46,26 +54,30 @@ export class CHUploadComponent implements OnInit {
             return;
         }
 
+        this.successValue = '上传中...';
         this.httpService.upload(JSON.stringify(this.formModel.value)).subscribe(
             output => {
                 if (this.errorValue == '') {
                     this.successValue = '上传成功';
-                    this.formModel.reset({
-                        'address': '',
-                        'wechatid': '',
-                        'picData': ''
-                        });
+                    this.errorValue = '';
                 }
             },
             error => {
                 if (error != null) {
-                    this.errorValue = error.error['text'];
+                    let errorInfo: string = error.error['text'];
+                    if (errorInfo.length > 20) {
+                        errorInfo = '上传失败'
+                    }
+                    this.errorValue = errorInfo;
+                    this.successValue = '';
                 }
             }
         )
     }
 
     selectFile() {
+        this.successValue = '';
+
         if (this.errorValue != '') {
             this.errorValue = '';
         }
